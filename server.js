@@ -9,12 +9,13 @@ const saltRounds = 12;
 const myPlaintextPassword = 'sUperpassw0rd!';
 const someOtherPlaintextPassword = 'pass123';
 
-// app.get('/', (req, res) => {
-//     res.send("Hello Express");
-// });
+
 //START_ASYNC -do not remove notes, place code between correct pair of notes.
 
-
+bcrypt.hash(myPlaintextPassword, saltRounds, function(err, hash) {
+  // Store hash in your password DB.
+    console.log(hash);
+});
 
 //END_ASYNC
 
