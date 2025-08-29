@@ -13,7 +13,7 @@ const someOtherPlaintextPassword = 'pass123';
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
-app.use(cors())
+app.use(cors());
 //START_ASYNC -do not remove notes, place code between correct pair of notes.
 bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
   console.log("Hash: " + hash);
